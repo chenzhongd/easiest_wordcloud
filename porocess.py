@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
 # 设置相关的文件路径
-BG_IMAGE_PATH = "pic/jd_logo.png"  # 背景图片路径
-TEXT_PATH = 'call_text.txt'  # 文本文件路径
+BG_IMAGE_PATH = "pic/loc.jpg"  # 背景图片路径
+TEXT_PATH = 'text.txt'  # 文本文件路径
 FONT_PATH = 'msyh.ttf'  # 字体文件路径
 STOPWORDS_PATH = 'stopword.txt'  # 停用词文件路径
 
@@ -40,7 +40,7 @@ def extract_keywords(text, top_k=1000, allow_pos=('nr',)):
     return {word: weight for word, weight in tags}
 
 
-def draw_wordcloud(keywords, font_path, bg_image_path, output_path="wordcloud2.jpg"):
+def draw_wordcloud(keywords, font_path, bg_image_path, output_path="wordcloud.jpg"):
     """生成并显示词云"""
     back_coloring = plt.imread(bg_image_path)
     wc = WordCloud(
